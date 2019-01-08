@@ -7,7 +7,7 @@
     "model",
     "events"
   ],
-  "description": "An easier Http client for laravel",
+  "description": "Bare bones laravel activity logger package just to log model activity.",
   "authors": [
     {
       "name": "minhajul",
