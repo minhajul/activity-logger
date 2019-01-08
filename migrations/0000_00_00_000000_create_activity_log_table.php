@@ -15,10 +15,9 @@ class CreateActivityLogTable extends Migration
     {
         Schema::create('activity_logs', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('cause');
+            $table->string('name');
             $table->integer('loggable_id');
             $table->string('loggable_type');
-
             $table->timestamps();
         });
     }

@@ -25,7 +25,7 @@ trait RecordsActivity
     protected static function storeActivity($model, $event)
     {
         $activityLog = new Activity();
-        $activityLog->cause = self::getActivityName($model, $event);
+        $activityLog->name = self::getActivityName($model, $event);
         $model->activities()->save($activityLog);
     }
 
