@@ -1,1 +1,1 @@
-## Welcome to Laravel Activity Log!
+## Welcome to Laravel Activity Logger!

@@ -1,10 +1,10 @@
 <?php
 
-namespace Minhajul\ActivityLog\Models;
+namespace Minhajul\ActivityLogger\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ActivityLog extends Model
+class Activity extends Model
 {
     /**
      * The table associated with the model.

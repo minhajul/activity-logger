@@ -1,10 +1,10 @@
 <?php
 
-namespace Minhajul\ActivityLog;
+namespace Minhajul\ActivityLogger;
 
 use Illuminate\Support\ServiceProvider;
 
-class ActivityLogServiceProvider extends ServiceProvider
+class ActivityLoggerServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap services.
@@ -27,10 +27,6 @@ class ActivityLogServiceProvider extends ServiceProvider
      */
     public function register()
     {
-//        $this->app->singleton(ActivityLog::class, function (){
-//            return new ActivityLog();
-//        });
-//
-//        $this->app->alias(ActivityLog::class, 'Activity');
+        //
     }
 }
