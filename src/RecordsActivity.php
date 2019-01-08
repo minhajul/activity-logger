@@ -7,10 +7,8 @@ use Minhajul\ActivityLogger\Models\Activity;
 
 trait RecordsActivity
 {
-    protected static function boot()
+    protected static function bootRecordsActivity()
     {
-        parent::boot();
-
         foreach (static::getModelEvents() as $event){
             static::$event(function ($model) use ($event){
                 self::storeActivity($model, $event);
@@ -42,7 +40,7 @@ trait RecordsActivity
         ];
     }
 
-    protected function activities()
+    public function activities()
     {
         return $this->morphMany(Activity::class, 'loggable');
     }
