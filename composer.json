@@ -1,10 +1,30 @@
 {
   "name": "minhajul/activity-logger",
+  "keywords": [
+    "laravel",
+    "activity",
+    "logger",
+    "model",
+    "events"
+  ],
+  "description": "An easier Http client for laravel",
   "authors": [
     {
       "name": "minhajul",
       "email": "kmsohelinfo@gmail.com"
     }
   ],
-  "require": {}
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Minhajul\\ActivityLogger\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Minhajul\\ActivityLogger\\ActivityLoggerServiceProvider"
+      ]
+    }
+  }
 }
