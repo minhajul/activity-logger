@@ -26,6 +26,7 @@ trait RecordsActivity
     {
         $activityLog = new Activity();
         $activityLog->name = self::getActivityName($model, $event);
+        $activityLog->user_id = auth()->id();
         $model->activities()->save($activityLog);
     }
 
