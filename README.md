@@ -22,6 +22,22 @@ You can publish the config file by running this command:
 
 Run ```php artisan migrate``` to create related database
 
+## Usages 
+
+```php
+// Add this trait in your model
+use RecordsActivity;
+
+// By default package will track 'created', 'updated' , 'deleted', 'restored' events if you want to override events you can add static $recordEvents in model 
+protected static $recordEvents = [ 'created', 'updated']
+
+// To fetch model events
+$model->activities;
+
+// To fetch events caused by specific user
+$user->causedBy;
+```
+
 ## Contributing
 
 ## Credits
