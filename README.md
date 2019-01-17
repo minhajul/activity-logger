@@ -12,13 +12,13 @@ or
 
 ```
 "require": {
-    "minhajul/activity-logger": "master"
+    "minhajul/activity-logger": "dev-master"
 }
 ```
 then execute `composer update` 
 
 You can publish the migration with:
-```php artisan vendor:publish --provider="Minhajul\ActivityLogger\ActivityLoggerServiceProvider" --tag="migrations"```
+```php artisan vendor:publish```
 
 Run ```php artisan migrate``` to create related database
 
