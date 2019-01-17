@@ -3,7 +3,7 @@
 namespace Minhajul\ActivityLogger;
 
 use Illuminate\Support\ServiceProvider;
-use Minhajul\ActivityLogger\Commands\DeleteOldActivity;
+use Minhajul\ActivityLogger\Commands\DeleteOlderActivity;
 
 class ActivityLoggerServiceProvider extends ServiceProvider
 {
@@ -20,10 +20,9 @@ class ActivityLoggerServiceProvider extends ServiceProvider
 
         $this->loadMigrationsFrom(__DIR__.'/../migrations');
 
-
         if ($this->app->runningInConsole()){
             $this->commands([
-                DeleteOldActivity::class
+                DeleteOlderActivity::class
             ]);
         }
     }

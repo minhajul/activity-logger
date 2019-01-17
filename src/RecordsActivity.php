@@ -52,4 +52,9 @@ trait RecordsActivity
     {
         return $this->morphMany(Activity::class, 'loggable');
     }
+
+    public function causedBy()
+    {
+        return $this->hasMany(Activity::class, 'user_id');
+    }
 }

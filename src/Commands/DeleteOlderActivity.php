@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
 use Minhajul\ActivityLogger\Models\Activity;
 
-class DeleteOldActivity extends Command
+class DeleteOlderActivity extends Command
 {
     /**
      * The name and signature of the console command.
