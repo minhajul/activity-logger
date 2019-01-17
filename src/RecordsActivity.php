@@ -3,6 +3,7 @@
 namespace Minhajul\ActivityLogger;
 
 use ReflectionClass;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Minhajul\ActivityLogger\Models\Activity;
 
 trait RecordsActivity
@@ -36,9 +37,15 @@ trait RecordsActivity
             return static::$recordsEvent;
         }
 
-        return [
+        $events = [
             'created', 'updated' , 'deleted'
         ];
+
+        if (array_has(class_uses_recursive(static::class), SoftDeletes::class)){
+            array_push($events, 'restored');
+        }
+
+        return $events;
     }
 
     public function activities()
