@@ -33,8 +33,8 @@ trait RecordsActivity
 
     protected static function getModelEvents()
     {
-        if (isset(static::$recordsEvent)){
-            return static::$recordsEvent;
+        if (isset(static::$recordEvents)){
+            return static::$recordEvents;
         }
 
         $events = [
