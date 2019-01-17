@@ -17,7 +17,7 @@ or
 ```
 then execute `composer update` 
 
-You can publish the migration with:
+You can publish the config file by running this command:
 ```php artisan vendor:publish```
 
 Run ```php artisan migrate``` to create related database
