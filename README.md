@@ -34,8 +34,8 @@ protected static $recordEvents = [ 'created', 'updated']
 // To fetch model events
 $model->activities;
 
-// To fetch events caused by specific user
-$user->causedBy;
+// To fetch activities caused by a specific user
+$user->activity;
 ```
 
 ## Contributing
