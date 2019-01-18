@@ -2,8 +2,8 @@
 
 namespace Minhajul\ActivityLogger\Commands;
 
-use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
+use Illuminate\Console\Command;
 use Minhajul\ActivityLogger\Models\Activity;
 
 class DeleteOlderActivity extends Command
@@ -31,7 +31,6 @@ class DeleteOlderActivity extends Command
     {
         parent::__construct();
     }
-
 
     public function handle()
     {
