@@ -2,6 +2,7 @@
 
 namespace Minhajul\ActivityLogger;
 
+use App\User;
 use ReflectionClass;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Minhajul\ActivityLogger\Models\Activity;

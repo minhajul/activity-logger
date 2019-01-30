@@ -2,7 +2,6 @@
 
 namespace Minhajul\ActivityLogger\Models;
 
-use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Activity extends Model
@@ -26,9 +25,15 @@ class Activity extends Model
         return $this->morphTo();
     }
 
-    public function user()
+    public function causedBy()
     {
-        return $this->belongsTo(User::class);
+        if (class_exists('\App\User')){
+            return $this->belongsTo('App\User', 'user_id');
+        }elseif (class_exists('\App\Models\User')){
+            return $this->belongsTo('App\Models\User', 'user_id');
+        }else {
+            return null;
+        }
     }
 
 }
